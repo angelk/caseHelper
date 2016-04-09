@@ -1,0 +1,13 @@
+language: php
+php:
+  - 5.6
+  - 7.0
+
+script:
+    - composer install
+    - vendor/bin/phpunit -c Test/Phpunit/phpunit.xml Test/Phpunit/
+
+notifications:
+    on_failure: always
+    on_change: always
+    on_success: never
